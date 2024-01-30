@@ -1,0 +1,26 @@
+   PROCEDURE Dot product (tab1: ARRAY_OF integer[10];tab2:ARRAY_OF integer[10])
+   VAR
+    i : integer;
+    p:float;
+   BEGIN
+    p:=0;
+    FOR i FROM 0 TO 10   DO
+          p := p + tab1[i]*tab2[i];
+    END_FOR
+   END
+    
+    ALGORITHM ortho
+    VAR
+        i,j:integer;
+        n:integer;
+    BEGIN
+        FOR i FROM 0 TO n DO
+         FOR j FROM i+1 TO n DO
+              if(Dot product(tab1[i],tab[j])===0){
+                return "orthogonal";
+              }else{
+                return "not orthogonal";
+              }
+         END_FOR
+        END_FOR
+    END

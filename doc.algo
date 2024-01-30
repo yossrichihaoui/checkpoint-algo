@@ -1,0 +1,39 @@
+ALGORITHM sentence
+VAR
+    count-c : INTEGER;
+    count-v : INTEGER;
+    count-w : INTEGER ; 
+    i : INTEGER;
+    carac : CHAR;
+    sent : string;
+BEGIN
+write ("give me a sentence");
+read(sent);
+count_c := 0
+count_w := 0
+count_v := 0
+
+i := 0
+SENT := "Your sentence goes here."
+
+WHILE (i < length(SENT) AND SENT[i] <> ".") DO
+    count_c := count_c + 1
+
+    IF SENT[i] = " " THEN
+        count_w := count_w + 1
+
+    IF SENT[i] IN ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'] THEN
+        count_v := count_v + 1
+
+    i := i + 1
+
+END_WHILE
+
+WRITE("The length of SENT is ", count_c);
+WRITE("The number of words in SENT is ", count_w);
+WRITE("The number of vowels in SENT is ", count_v);
+
+END
+
+
+
